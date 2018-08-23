@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel", "src\Transformalize.Provider.Excel\Transformalize.Provider.Excel.csproj", "{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel.Autofac", "src\Transformalize.Provider.Excel.Autofac\Transformalize.Provider.Excel.Autofac.csproj", "{61F77BC9-21E5-454E-876C-6D93DAF641E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "src\IntegrationTests\IntegrationTests.csproj", "{48CE21F3-36EE-4879-8834-9B9CD4D6342B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A33ECDB4-5BF0-42ED-9FC4-A096D6898AFD}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{A51DB5C1-D6AA-4C1F-9A1C-FF8F5F649A88}"
+	ProjectSection(SolutionItems) = preProject
+		nuget\nuget.bat = nuget\nuget.bat
+		nuget\Transformalize.Provider.Excel.Autofac.nuspec = nuget\Transformalize.Provider.Excel.Autofac.nuspec
+		nuget\Transformalize.Provider.Excel.nuspec = nuget\Transformalize.Provider.Excel.nuspec
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F77BC9-21E5-454E-876C-6D93DAF641E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F77BC9-21E5-454E-876C-6D93DAF641E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F77BC9-21E5-454E-876C-6D93DAF641E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F77BC9-21E5-454E-876C-6D93DAF641E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48CE21F3-36EE-4879-8834-9B9CD4D6342B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48CE21F3-36EE-4879-8834-9B9CD4D6342B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48CE21F3-36EE-4879-8834-9B9CD4D6342B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48CE21F3-36EE-4879-8834-9B9CD4D6342B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A51DB5C1-D6AA-4C1F-9A1C-FF8F5F649A88} = {A33ECDB4-5BF0-42ED-9FC4-A096D6898AFD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC02244B-586F-431D-97BF-6733C0A18165}
+	EndGlobalSection
+EndGlobal
