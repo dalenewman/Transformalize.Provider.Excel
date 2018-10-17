@@ -87,8 +87,21 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>set f="$(SolutionDir)..\Transformalize\Pipeline.Command\bin\x64\$(ConfigurationName)\plugins"
+    <PostBuildEvent>set f="$(SolutionDir)..\Transformalize\Pipeline.Command\plugins"
 
-if exist %25f%25 copy /Y "$(TargetDir)*.*" "%25f%25"</PostBuildEvent>
+if exist %25f%25 copy /Y "DocumentFormat.OpenXml.dll" "%25f%25"
+if exist %25f%25 copy /Y "ExcelDataReader.dll" "%25f%25"
+if exist %25f%25 copy /Y "OpenXmlPowerTools.dll" "%25f%25"
+if exist %25f%25 copy /Y "System.IO.FileSystem.Primitives.dll" "%25f%25"
+if exist %25f%25 copy /Y "System.IO.Packaging.dll" "%25f%25"
+if exist %25f%25 copy /Y "System.Management.Automation.dll" "%25f%25"
+if exist %25f%25 copy /Y "Transformalize.Provider.Excel.Autofac.dll" "%25f%25"
+if exist %25f%25 copy /Y "Transformalize.Provider.Excel.dll" "%25f%25"
+
+
+
+
+
+</PostBuildEvent>
   </PropertyGroup>
 </Project>
