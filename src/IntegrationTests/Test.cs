@@ -98,5 +98,48 @@ namespace IntegrationTests {
                 }
             }
         }
+
+        [TestMethod]
+        public void ReadSchema() {
+            const string xml = @"<add name='Excel'>
+  <connections>
+    <add name='input' provider='excel' file='c:\temp\bogus.xlsx' start='2'>
+        <types>
+            <add type='byte' />
+            <add type='int' />
+            <add type='string' />
+        </types>
+    </add>
+    <add name='output' provider='internal' />
+  </connections>
+  <entities>
+    <add name='BogusStar' alias='Contact' page='1' size='10'>
+      <fields>
+      </fields>
+    </add>
+  </entities>
+</add>";
+            using (var outer = new ConfigurationContainer().CreateScope(xml)) {
+                using (var inner = new TestContainer(new ExcelModule()).CreateScope(outer, new ConsoleLogger(LogLevel.Debug))) {
+
+                    var process = inner.Resolve<Process>();
+
+                    var schemaReader = inner.ResolveNamed<ISchemaReader>(process.Connections.First().Key);
+                    var schema = schemaReader.Read();
+
+                    var entity = schema.Entities.First();
+
+                    Assert.AreEqual(5, entity.Fields.Count);
+                    Assert.AreEqual("int", entity.Fields[0].Type);
+                    Assert.AreEqual("string", entity.Fields[1].Type);
+                    Assert.AreEqual("string", entity.Fields[2].Type);
+                    Assert.AreEqual("byte", entity.Fields[3].Type);
+                    Assert.AreEqual("int", entity.Fields[4].Type);
+
+
+                }
+            }
+        }
+
     }
 }

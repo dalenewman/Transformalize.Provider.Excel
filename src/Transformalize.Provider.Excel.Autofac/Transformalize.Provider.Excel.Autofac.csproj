@@ -63,8 +63,8 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="Transformalize, Version=0.3.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Transformalize.0.3.8-beta\lib\net462\Transformalize.dll</HintPath>
+    <Reference Include="Transformalize, Version=0.3.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Transformalize.0.3.12-beta\lib\net462\Transformalize.dll</HintPath>
     </Reference>
     <Reference Include="Transformalize.Provider.OpenXml, Version=0.3.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Transformalize.Provider.OpenXml.0.3.6-beta\lib\net452\Transformalize.Provider.OpenXml.dll</HintPath>
@@ -74,7 +74,6 @@
   <ItemGroup>
     <Compile Include="ExcelModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RunTimeRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Transformalize.Provider.Excel\Transformalize.Provider.Excel.csproj">

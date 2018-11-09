@@ -29,10 +29,7 @@ namespace Transformalize.Providers.Excel {
         private readonly FileInfo _fileInfo;
         private readonly int _lines;
 
-        public ExcelInspection(
-            IConnectionContext context,
-            FileInfo fileInfo,
-            int lines = 100) {
+        public ExcelInspection(IConnectionContext context, FileInfo fileInfo, int lines = 100) {
             _context = context;
             _fileInfo = fileInfo;
             _lines = lines;
@@ -57,14 +54,14 @@ namespace Transformalize.Providers.Excel {
                 Name = "input",
                 Provider = "excel",
                 File = _fileInfo.FullName,
-                Start = hasColumnNames ? 1 : 0
+                Start = hasColumnNames ? 2 : 1,
+                Types = _context.Connection.Types
             };
-
-            // after WithDefaults()
 
             var process = new Process {
                 Name = "ExcelInspector",
                 Pipeline = "parallel.linq",
+                ReadOnly = true,
                 Connections = new List<Connection> { connection }
             };
 
