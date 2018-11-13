@@ -103,7 +103,7 @@ namespace IntegrationTests {
         public void ReadSchema() {
             const string xml = @"<add name='Excel'>
   <connections>
-    <add name='input' provider='excel' file='c:\temp\bogus.xlsx' start='2'>
+    <add name='input' provider='excel' file='c:\temp\bogus.xlsx'>
         <types>
             <add type='byte' />
             <add type='int' />
@@ -113,10 +113,7 @@ namespace IntegrationTests {
     <add name='output' provider='internal' />
   </connections>
   <entities>
-    <add name='BogusStar' alias='Contact' page='1' size='10'>
-      <fields>
-      </fields>
-    </add>
+    <add name='BogusStar' alias='Contact' />
   </entities>
 </add>";
             using (var outer = new ConfigurationContainer().CreateScope(xml)) {
