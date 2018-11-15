@@ -17,7 +17,7 @@
       <group targetFramework="net462">
         <dependency id="Autofac" version="4.6.2" />
         <dependency id="Transformalize.Provider.Excel" version="0.3.12-beta" />
-        <dependency id="Transformalize.Provider.OpenXml" version="0.3.6-beta" />
+        <dependency id="Transformalize.Provider.OpenXml" version="0.3.12-beta" />
       </group>
     </dependencies>
   </metadata>
