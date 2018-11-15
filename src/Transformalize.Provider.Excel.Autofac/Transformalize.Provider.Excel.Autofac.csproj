@@ -94,6 +94,7 @@ if exist %25f%25 copy /Y "OpenXmlPowerTools.dll" "%25f%25"
 if exist %25f%25 copy /Y "System.IO.FileSystem.Primitives.dll" "%25f%25"
 if exist %25f%25 copy /Y "System.IO.Packaging.dll" "%25f%25"
 if exist %25f%25 copy /Y "System.Management.Automation.dll" "%25f%25"
+if exist %25f%25 copy /Y "Transformalize.Provider.OpenXml.dll" "%25f%25"
 if exist %25f%25 copy /Y "Transformalize.Provider.Excel.Autofac.dll" "%25f%25"
 if exist %25f%25 copy /Y "Transformalize.Provider.Excel.dll" "%25f%25"
 
