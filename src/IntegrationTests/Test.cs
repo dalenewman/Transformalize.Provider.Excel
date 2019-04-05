@@ -16,9 +16,9 @@
 // limitations under the License.
 #endregion
 
-using System.Linq;
 using Autofac;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 using Transformalize.Configuration;
 using Transformalize.Containers.Autofac;
 using Transformalize.Contracts;
@@ -28,12 +28,12 @@ using Transformalize.Providers.Excel.Autofac;
 
 namespace IntegrationTests {
 
-    [TestClass]
-    public class Test {
+   [TestClass]
+   public class Test {
 
-        [TestMethod]
-        public void Write() {
-            const string xml = @"<add name='Excel' mode='init'>
+      [TestMethod]
+      public void Write() {
+         const string xml = @"<add name='Excel' mode='init'>
   <parameters>
     <add name='Size' type='int' value='1000' />
   </parameters>
@@ -53,20 +53,22 @@ namespace IntegrationTests {
     </add>
   </entities>
 </add>";
-            using (var outer = new ConfigurationContainer().CreateScope(xml)) {
-                using (var inner = new TestContainer(new BogusModule(), new ExcelModule()).CreateScope(outer, new ConsoleLogger(LogLevel.Debug))) {
-                    var process = inner.Resolve<Process>();
-                    var controller = inner.Resolve<IProcessController>();
-                    controller.Execute();
+         var logger = new ConsoleLogger(LogLevel.Debug);
+         using (var outer = new ConfigurationContainer().CreateScope(xml, logger)) {
+            var process = outer.Resolve<Process>();
+            using (var inner = new Container(new BogusModule(), new ExcelModule()).CreateScope(process, logger)) {
 
-                    Assert.AreEqual((uint)1000, process.Entities.First().Inserts);
-                }
+               var controller = inner.Resolve<IProcessController>();
+               controller.Execute();
+
+               Assert.AreEqual((uint)1000, process.Entities.First().Inserts);
             }
-        }
+         }
+      }
 
-        [TestMethod]
-        public void Read() {
-            const string xml = @"<add name='Excel'>
+      [TestMethod]
+      public void Read() {
+         const string xml = @"<add name='Excel'>
   <connections>
     <add name='input' provider='excel' file='c:\temp\bogus.xlsx' start='2' />
     <add name='output' provider='internal' />
@@ -83,25 +85,25 @@ namespace IntegrationTests {
     </add>
   </entities>
 </add>";
-            using (var outer = new ConfigurationContainer().CreateScope(xml)) {
-                using (var inner = new TestContainer(new ExcelModule()).CreateScope(outer, new ConsoleLogger(LogLevel.Debug))) {
+         var logger = new ConsoleLogger(LogLevel.Debug);
+         using (var outer = new ConfigurationContainer().CreateScope(xml, logger)) {
+            var process = outer.Resolve<Process>();
+            using (var inner = new Container(new ExcelModule()).CreateScope(process, logger)) {
 
-                    var process = inner.Resolve<Process>();
+               var controller = inner.Resolve<IProcessController>();
+               controller.Execute();
+               var rows = process.Entities.First().Rows;
 
-                    var controller = inner.Resolve<IProcessController>();
-                    controller.Execute();
-                    var rows = process.Entities.First().Rows;
-
-                    Assert.AreEqual(10, rows.Count);
+               Assert.AreEqual(10, rows.Count);
 
 
-                }
             }
-        }
+         }
+      }
 
-        [TestMethod]
-        public void ReadSchema() {
-            const string xml = @"<add name='Excel'>
+      [TestMethod]
+      public void ReadSchema() {
+         const string xml = @"<add name='Excel'>
   <connections>
     <add name='input' provider='excel' file='c:\temp\bogus.xlsx'>
         <types>
@@ -116,27 +118,28 @@ namespace IntegrationTests {
     <add name='BogusStar' alias='Contact' />
   </entities>
 </add>";
-            using (var outer = new ConfigurationContainer().CreateScope(xml)) {
-                using (var inner = new TestContainer(new ExcelModule()).CreateScope(outer, new ConsoleLogger(LogLevel.Debug))) {
+         var logger = new ConsoleLogger(LogLevel.Debug);
+         using (var outer = new ConfigurationContainer().CreateScope(xml, logger)) {
+            var process = outer.Resolve<Process>();
 
-                    var process = inner.Resolve<Process>();
+            using (var inner = new Container(new ExcelModule()).CreateScope(process, logger)) {
 
-                    var schemaReader = inner.ResolveNamed<ISchemaReader>(process.Connections.First().Key);
-                    var schema = schemaReader.Read();
+               var schemaReader = inner.ResolveNamed<ISchemaReader>(process.Connections.First().Key);
+               var schema = schemaReader.Read();
 
-                    var entity = schema.Entities.First();
+               var entity = schema.Entities.First();
 
-                    Assert.AreEqual(5, entity.Fields.Count);
-                    Assert.AreEqual("int", entity.Fields[0].Type);
-                    Assert.AreEqual("string", entity.Fields[1].Type);
-                    Assert.AreEqual("string", entity.Fields[2].Type);
-                    Assert.AreEqual("byte", entity.Fields[3].Type);
-                    Assert.AreEqual("int", entity.Fields[4].Type);
+               Assert.AreEqual(5, entity.Fields.Count);
+               Assert.AreEqual("int", entity.Fields[0].Type);
+               Assert.AreEqual("string", entity.Fields[1].Type);
+               Assert.AreEqual("string", entity.Fields[2].Type);
+               Assert.AreEqual("byte", entity.Fields[3].Type);
+               Assert.AreEqual("int", entity.Fields[4].Type);
 
 
-                }
             }
-        }
+         }
+      }
 
-    }
+   }
 }
