@@ -22,6 +22,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\src\Transformalize.Provider.Excel.Autofac\bin\Release\Transformalize.Provider.Excel.Autofac.dll" target="lib\net462\Transformalize.Provider.Excel.Autofac.dll" />
+    <file src="..\src\Transformalize.Provider.Excel.Autofac.v3\bin\Release\Transformalize.Provider.Excel.Autofac.v3.dll" target="lib\net462\Transformalize.Provider.Excel.Autofac.v3.dll" />
   </files>
 </package>
