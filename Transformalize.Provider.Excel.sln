@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel", "src\Transformalize.Provider.Excel\Transformalize.Provider.Excel.csproj", "{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD}"
 EndProject
@@ -18,8 +18,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{A51DB5C1
 	ProjectSection(SolutionItems) = preProject
 		nuget\nuget.bat = nuget\nuget.bat
 		nuget\Transformalize.Provider.Excel.Autofac.nuspec = nuget\Transformalize.Provider.Excel.Autofac.nuspec
+		nuget\Transformalize.Provider.Excel.Autofac.v3.nuspec = nuget\Transformalize.Provider.Excel.Autofac.v3.nuspec
 		nuget\Transformalize.Provider.Excel.nuspec = nuget\Transformalize.Provider.Excel.nuspec
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel.Autofac.v3", "src\Transformalize.Provider.Excel.Autofac.v3\Transformalize.Provider.Excel.Autofac.v3.csproj", "{8846D844-B947-4159-88B2-DACA180A4A52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +42,10 @@ Global
 		{48CE21F3-36EE-4879-8834-9B9CD4D6342B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48CE21F3-36EE-4879-8834-9B9CD4D6342B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48CE21F3-36EE-4879-8834-9B9CD4D6342B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8846D844-B947-4159-88B2-DACA180A4A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8846D844-B947-4159-88B2-DACA180A4A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8846D844-B947-4159-88B2-DACA180A4A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8846D844-B947-4159-88B2-DACA180A4A52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

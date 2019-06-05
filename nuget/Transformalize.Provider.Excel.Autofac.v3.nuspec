@@ -1,26 +1,27 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>Transformalize.Provider.Excel</id>
+    <id>Transformalize.Provider.Excel.Autofac.v3</id>
     <version>0.6.6-beta</version>
-    <title>Excel Provider for Transformalize</title>
+    <title>Excel Provider for Transformalize Autofac Module</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
     <licenseUrl>https://github.com/dalenewman/Transformalize/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>https://github.com/dalenewman/Transformalize</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Excel Provider for Transformalize</description>
+    <description>Excel Provider for Transformalize Autofac Module</description>
     <releaseNotes>updated dependencies</releaseNotes>
     <copyright>Copyright 2013-2019</copyright>
     <tags>etl</tags>
     <dependencies>
       <group targetFramework="net462">
-        <dependency id="Transformalize" version="0.6.6-beta" />
-        <dependency id="ExcelDataReader" version="3.4.2" />
+        <dependency id="Autofac" version="3.5.2" />
+        <dependency id="Transformalize.Provider.Excel" version="0.6.6-beta" />
+        <dependency id="Transformalize.Provider.OpenXml" version="0.6.7-beta" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="..\src\Transformalize.Provider.Excel\bin\Release\Transformalize.Provider.Excel.dll" target="lib\net462\Transformalize.Provider.Excel.dll" />
+    <file src="..\src\Transformalize.Provider.Excel.Autofac\bin\Release\Transformalize.Provider.Excel.Autofac.dll" target="lib\net462\Transformalize.Provider.Excel.Autofac.dll" />
   </files>
 </package>
