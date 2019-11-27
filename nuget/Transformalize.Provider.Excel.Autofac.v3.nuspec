@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Transformalize.Provider.Excel.Autofac.v3</id>
-    <version>0.6.20-beta</version>
+    <version>0.6.21-beta</version>
     <title>Excel Provider for Transformalize Autofac Module</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
@@ -16,8 +16,8 @@
     <dependencies>
       <group targetFramework="net462">
         <dependency id="Autofac" version="3.5.2" />
-        <dependency id="Transformalize.Provider.Excel" version="0.6.20-beta" />
-        <dependency id="Transformalize.Provider.OpenXml" version="0.6.20-beta" />
+        <dependency id="Transformalize.Provider.Excel" version="0.6.21-beta" />
+        <dependency id="Transformalize.Provider.OpenXml" version="0.6.21-beta" />
       </group>
     </dependencies>
   </metadata>
