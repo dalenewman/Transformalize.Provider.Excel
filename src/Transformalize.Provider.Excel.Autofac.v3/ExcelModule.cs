@@ -47,9 +47,9 @@ namespace Transformalize.Providers.Excel.Autofac {
          var schemaReaders = new HashSet<string>();
 
          // Entity input
-         foreach (var entity in _process.Entities.Where(e => _process.Connections.First(c => c.Name == e.Connection).Provider == "excel")) {
+         foreach (var entity in _process.Entities.Where(e => _process.Connections.First(c => c.Name == e.Input).Provider == "excel")) {
 
-            var connection = _process.Connections.First(c => c.Name == entity.Connection);
+            var connection = _process.Connections.First(c => c.Name == entity.Input);
 
             if (schemaReaders.Add(connection.Key)) {
                builder.Register<ISchemaReader>(ctx => {
@@ -92,7 +92,7 @@ namespace Transformalize.Providers.Excel.Autofac {
             }).Named<IRead>(entity.Key);
          }
 
-         if (_process.Output().Provider == "excel") {
+         if (_process.GetOutputConnection().Provider == "excel") {
             // PROCESS OUTPUT CONTROLLER
             builder.Register<IOutputController>(ctx => new NullOutputController()).As<IOutputController>();
 
