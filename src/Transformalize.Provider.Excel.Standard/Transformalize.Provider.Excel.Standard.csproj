@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Transformalize.Provider.Excel</AssemblyName>
+    <RootNamespace>Transformalize.Providers.Excel</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\Transformalize.Provider.Excel.Shared\Transformalize.Provider.Excel.Shared.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="Transformalize" Version="0.8.29-beta" />
+  </ItemGroup>
+
+</Project>

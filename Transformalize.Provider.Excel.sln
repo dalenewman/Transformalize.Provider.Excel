@@ -25,7 +25,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{A51DB5C1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel.Autofac.v3", "src\Transformalize.Provider.Excel.Autofac.v3\Transformalize.Provider.Excel.Autofac.v3.csproj", "{8846D844-B947-4159-88B2-DACA180A4A52}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provider", "Provider", "{8477C3FA-5349-41E0-A3D2-6A08C554DFAA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Transformalize.Provider.Excel.Shared", "src\Transformalize.Provider.Excel.Shared\Transformalize.Provider.Excel.Shared.shproj", "{C4265377-5398-4ED1-9B60-2632E4D06E9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel.Standard", "src\Transformalize.Provider.Excel.Standard\Transformalize.Provider.Excel.Standard.csproj", "{99653214-C628-450B-A314-883A989A749F}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\Transformalize.Provider.Excel.Shared\Transformalize.Provider.Excel.Shared.projitems*{2dbd2b55-acc3-41ad-9a6d-f35d23a12edd}*SharedItemsImports = 4
+		src\Transformalize.Provider.Excel.Shared\Transformalize.Provider.Excel.Shared.projitems*{99653214-c628-450b-a314-883a989a749f}*SharedItemsImports = 5
+		src\Transformalize.Provider.Excel.Shared\Transformalize.Provider.Excel.Shared.projitems*{c4265377-5398-4ed1-9b60-2632e4d06e9d}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -47,12 +58,19 @@ Global
 		{8846D844-B947-4159-88B2-DACA180A4A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8846D844-B947-4159-88B2-DACA180A4A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8846D844-B947-4159-88B2-DACA180A4A52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99653214-C628-450B-A314-883A989A749F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99653214-C628-450B-A314-883A989A749F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99653214-C628-450B-A314-883A989A749F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99653214-C628-450B-A314-883A989A749F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD} = {8477C3FA-5349-41E0-A3D2-6A08C554DFAA}
 		{A51DB5C1-D6AA-4C1F-9A1C-FF8F5F649A88} = {A33ECDB4-5BF0-42ED-9FC4-A096D6898AFD}
+		{C4265377-5398-4ED1-9B60-2632E4D06E9D} = {8477C3FA-5349-41E0-A3D2-6A08C554DFAA}
+		{99653214-C628-450B-A314-883A989A749F} = {8477C3FA-5349-41E0-A3D2-6A08C554DFAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FC02244B-586F-431D-97BF-6733C0A18165}
