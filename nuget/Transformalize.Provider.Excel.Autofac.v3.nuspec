@@ -2,7 +2,7 @@
 <package>
    <metadata>
       <id>Transformalize.Provider.Excel.Autofac.v3</id>
-      <version>0.8.29-beta</version>
+      <version>0.10.1-beta</version>
       <title>Excel Provider for Transformalize Autofac Module</title>
       <authors>Dale Newman</authors>
       <owners>Dale Newman</owners>
@@ -10,19 +10,19 @@
       <projectUrl>https://github.com/dalenewman/Transformalize</projectUrl>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <description>Excel Provider for Transformalize Autofac Module</description>
-      <releaseNotes>updated dependencies</releaseNotes>
-      <copyright>Copyright 2013-2020</copyright>
+      <releaseNotes>gen maint</releaseNotes>
+      <copyright>Copyright © 2013-2022</copyright>
       <tags>etl</tags>
       <dependencies>
          <group targetFramework="net462">
             <dependency id="Autofac" version="3.5.2" />
-            <dependency id="Transformalize.Provider.Excel" version="0.8.29-beta" />
-            <dependency id="Transformalize.Provider.OpenXml" version="0.8.22-beta" />
+            <dependency id="Transformalize.Provider.Excel" version="0.10.1-beta" />
+            <dependency id="Transformalize.Provider.OpenXml" version="0.10.0-beta" />
          </group>
       </dependencies>
    </metadata>
    <files>
-      <file src="..\src\Transformalize.Provider.Excel.Autofac.v3\bin\Debug\Transformalize.Provider.Excel.Autofac.v3.dll" target="lib\net462\Transformalize.Provider.Excel.Autofac.v3.dll" />
-      <file src="..\src\Transformalize.Provider.Excel.Autofac.v3\bin\Debug\Transformalize.Provider.Excel.Autofac.v3.pdb" target="lib\net462\Transformalize.Provider.Excel.Autofac.v3.pdb" />
+      <file src="..\src\Transformalize.Provider.Excel.Autofac.v3\bin\Release\Transformalize.Provider.Excel.Autofac.v3.dll" target="lib\net462\Transformalize.Provider.Excel.Autofac.v3.dll" />
+      <!--<file src="..\src\Transformalize.Provider.Excel.Autofac.v3\bin\Release\Transformalize.Provider.Excel.Autofac.v3.pdb" target="lib\net462\Transformalize.Provider.Excel.Autofac.v3.pdb" />-->
    </files>
 </package>
