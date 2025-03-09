@@ -1,14 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28922.388
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35728.132 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel", "src\Transformalize.Provider.Excel\Transformalize.Provider.Excel.csproj", "{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel.Autofac", "src\Transformalize.Provider.Excel.Autofac\Transformalize.Provider.Excel.Autofac.csproj", "{61F77BC9-21E5-454E-876C-6D93DAF641E7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "src\IntegrationTests\IntegrationTests.csproj", "{48CE21F3-36EE-4879-8834-9B9CD4D6342B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A33ECDB4-5BF0-42ED-9FC4-A096D6898AFD}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
@@ -19,58 +13,39 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{A51DB5C1
 		nuget\myget.bat = nuget\myget.bat
 		nuget\nuget.bat = nuget\nuget.bat
 		nuget\Transformalize.Provider.Excel.Autofac.nuspec = nuget\Transformalize.Provider.Excel.Autofac.nuspec
-		nuget\Transformalize.Provider.Excel.Autofac.v3.nuspec = nuget\Transformalize.Provider.Excel.Autofac.v3.nuspec
 		nuget\Transformalize.Provider.Excel.nuspec = nuget\Transformalize.Provider.Excel.nuspec
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel.Autofac.v3", "src\Transformalize.Provider.Excel.Autofac.v3\Transformalize.Provider.Excel.Autofac.v3.csproj", "{8846D844-B947-4159-88B2-DACA180A4A52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel", "src\Transformalize.Provider.Excel\Transformalize.Provider.Excel.csproj", "{AF68E695-1BE6-454E-A718-CF5BCE44095D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provider", "Provider", "{8477C3FA-5349-41E0-A3D2-6A08C554DFAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel.Autofac", "src\Transformalize.Provider.Excel.Autofac\Transformalize.Provider.Excel.Autofac.csproj", "{AC0DC827-EA79-4E5F-BEEB-79EA6E8DCFF9}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Transformalize.Provider.Excel.Shared", "src\Transformalize.Provider.Excel.Shared\Transformalize.Provider.Excel.Shared.shproj", "{C4265377-5398-4ED1-9B60-2632E4D06E9D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Excel.Standard", "src\Transformalize.Provider.Excel.Standard\Transformalize.Provider.Excel.Standard.csproj", "{99653214-C628-450B-A314-883A989A749F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "src\Test\Test.csproj", "{B406DD2E-1A18-426B-A47B-BFF76CF8A397}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\Transformalize.Provider.Excel.Shared\Transformalize.Provider.Excel.Shared.projitems*{2dbd2b55-acc3-41ad-9a6d-f35d23a12edd}*SharedItemsImports = 4
-		src\Transformalize.Provider.Excel.Shared\Transformalize.Provider.Excel.Shared.projitems*{99653214-c628-450b-a314-883a989a749f}*SharedItemsImports = 5
-		src\Transformalize.Provider.Excel.Shared\Transformalize.Provider.Excel.Shared.projitems*{c4265377-5398-4ed1-9b60-2632e4d06e9d}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61F77BC9-21E5-454E-876C-6D93DAF641E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61F77BC9-21E5-454E-876C-6D93DAF641E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61F77BC9-21E5-454E-876C-6D93DAF641E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61F77BC9-21E5-454E-876C-6D93DAF641E7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{48CE21F3-36EE-4879-8834-9B9CD4D6342B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48CE21F3-36EE-4879-8834-9B9CD4D6342B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48CE21F3-36EE-4879-8834-9B9CD4D6342B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{48CE21F3-36EE-4879-8834-9B9CD4D6342B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8846D844-B947-4159-88B2-DACA180A4A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8846D844-B947-4159-88B2-DACA180A4A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8846D844-B947-4159-88B2-DACA180A4A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8846D844-B947-4159-88B2-DACA180A4A52}.Release|Any CPU.Build.0 = Release|Any CPU
-		{99653214-C628-450B-A314-883A989A749F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99653214-C628-450B-A314-883A989A749F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99653214-C628-450B-A314-883A989A749F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99653214-C628-450B-A314-883A989A749F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF68E695-1BE6-454E-A718-CF5BCE44095D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF68E695-1BE6-454E-A718-CF5BCE44095D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF68E695-1BE6-454E-A718-CF5BCE44095D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF68E695-1BE6-454E-A718-CF5BCE44095D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC0DC827-EA79-4E5F-BEEB-79EA6E8DCFF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC0DC827-EA79-4E5F-BEEB-79EA6E8DCFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC0DC827-EA79-4E5F-BEEB-79EA6E8DCFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC0DC827-EA79-4E5F-BEEB-79EA6E8DCFF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B406DD2E-1A18-426B-A47B-BFF76CF8A397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B406DD2E-1A18-426B-A47B-BFF76CF8A397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B406DD2E-1A18-426B-A47B-BFF76CF8A397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B406DD2E-1A18-426B-A47B-BFF76CF8A397}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2DBD2B55-ACC3-41AD-9A6D-F35D23A12EDD} = {8477C3FA-5349-41E0-A3D2-6A08C554DFAA}
 		{A51DB5C1-D6AA-4C1F-9A1C-FF8F5F649A88} = {A33ECDB4-5BF0-42ED-9FC4-A096D6898AFD}
-		{C4265377-5398-4ED1-9B60-2632E4D06E9D} = {8477C3FA-5349-41E0-A3D2-6A08C554DFAA}
-		{99653214-C628-450B-A314-883A989A749F} = {8477C3FA-5349-41E0-A3D2-6A08C554DFAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FC02244B-586F-431D-97BF-6733C0A18165}

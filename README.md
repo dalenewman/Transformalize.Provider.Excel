@@ -1,8 +1,6 @@
 ### Overview
 
-This adds an `Excel` provider to Transformalize using [ExcelDataReader](https://github.com/ExcelDataReader/ExcelDataReader) for reading and [OpenXmlPowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools) for writing.  It is a plug-in compatible with Transformalize 0.3.12-beta.
-
-Build the Autofac project and put it's output into Transformalize's *plugins* folder.
+This adds an `Excel` provider to Transformalize using [ExcelDataReader](https://github.com/ExcelDataReader/ExcelDataReader) for reading and [OpenXmlPowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools) for writing.
 
 ### Write Usage
 

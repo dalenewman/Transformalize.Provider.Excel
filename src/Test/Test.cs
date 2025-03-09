@@ -26,7 +26,7 @@ using Transformalize.Providers.Bogus.Autofac;
 using Transformalize.Providers.Console;
 using Transformalize.Providers.Excel.Autofac;
 
-namespace IntegrationTests {
+namespace Test {
 
    [TestClass]
    public class Test {
